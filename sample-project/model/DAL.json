@@ -1,0 +1,23 @@
+{
+    "GET": {
+        "getOpenReleaseBundle": "SELECT * FROM YTLBUNDLE where  isDeleted = 0 and status = ?;",
+        "getBundles": "SELECT *  FROM YTLBUNDLE where isDeleted = 0 and  createdBy = ? order by createdOn desc limit 10;",
+        "getBundleData": "SELECT id,bundle,db,concat(db,'.',tableName) as tableName,data,createdBy,createdOn FROM YTLBUNDLEDATA where bundle = ?",
+        "getTablesFromBundle": "SELECT id, db, tableName FROM YTLBUNDLEDATA WHERE bundle = ?",
+        "getViewBundleData": "SELECT db,tableName FROM YTLBUNDLEDATA where bundle = ?",
+        "viewTableDataFromBundle": "SELECT data FROM YTLBUNDLEDATA where bundle = ? and db = ? and tableName = ?",
+        "getSingleBundle": "SELECT * FROM YTLBUNDLE where  isDeleted = 0 and bundleName = ?;"
+    },
+    "INSERT": {        
+        "saveBundleData": "INSERT INTO YTLBUNDLEDATA VALUES (?,?,?,?,?,?,?)"
+    },
+    "DELETE": {
+
+    },
+    "UPDATE": {
+       "updateBundle": "UPDATE YTLBUNDLE SET status = ?, changedBy = ?, changedOn = NOW(),releasedOn= NOW(),releasedBy = ?  WHERE bundleName = ?"
+    },
+    "STORE_PROCEDURES": {
+        "createBundle": "call spTLCreateBundle(?,?)"
+    }
+}

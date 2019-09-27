@@ -1,0 +1,33 @@
+{
+    "ERR001": {
+      "msg": "Failed To Create Bundle"
+    },
+    "ERR002": {
+      "msg": "Failed To Update Bundle"
+    },
+    "ERR003": {
+      "msg": "Failed To Fetch Available Bundle"
+    },
+    "ERR004": {
+      "msg": "Failed To Fetch Release Bundle"
+    },
+    "ERR005": {
+      "msg": "Failed To Fetch All Bundles"
+    },
+    "ERR006": {
+      "msg": "Failed To Download Bundle"
+    },
+    "ERR007": {
+      "msg": "Failed To Fetch Tables Details From Bundle"
+    },
+    "ERR008": {
+      "msg": "Failed To Fetch Table Data From Bundle"
+    },
+    "ERR009": {
+      "msg": "Failed To Save Bundle Data"
+    },
+    "ERR010": {
+      "msg": "No Data"
+    }
+  }
+  

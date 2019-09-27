@@ -1,0 +1,23 @@
+{
+  "server": {
+    "port": 7130
+  },
+  "app": {
+    "prefix": "/rtransport/util",
+    "secret": "ilovenodejsanditis"
+  },
+  "db": {
+    "sql_db": "YCW",
+    "host": "10.26.24.24",
+    "user": "ycwadmin",
+    "password": "ycwadmindev"
+  },
+  "dbwso2": {
+    "sql_db": "WSO2USERSTORE",
+    "host": "10.26.61.14",
+    "user": "wso2um",
+    "password": "Wso2um@2343"
+  },
+  "url": {
+  }
+}

@@ -1,0 +1,69 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: cu-nj-transportlayer
+  namespace: commonutilities
+  labels:
+    app: cu-nj-transportlayer
+spec:
+  ports:
+  - port: 7130
+    targetPort: 7130
+    name: http
+    protocol: TCP
+  selector:
+    app: cu-nj-transportlayer
+  type: ClusterIP
+
+
+---
+
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: cu-nj-transportlayer                                   
+  namespace: commonutilities
+  labels:
+    app: cu-nj-transportlayer
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: cu-nj-transportlayer
+  template:
+    metadata:
+      labels:
+        app: cu-nj-transportlayer
+    spec:
+      containers:
+      - name: cu-nj-transportlayer
+        image: 10.26.61.34:8083/cu_nj_transportlayer-2-0:2
+        ports:
+        - containerPort: 7130
+        env:
+        - name: NODE_ENV
+          value: "dev"
+        - name: BuildNumber
+          value: "2"
+        - name: PORT
+          value: "7130"
+        - name: ELASTIC_APM_SERVER_URL
+          value: "http://10.26.24.32:8200"
+        - name: ELASTIC_APM_SERVICE_NAME
+          value: "CU_NJ_TransportLayer"
+      hostAliases:
+      - ip: 10.26.24.45
+        hostnames:
+        - mongo1
+      - ip: 10.26.24.35
+        hostnames:
+        - mongo2
+      - ip: 10.26.24.39
+        hostnames:
+        - mongo3
+      - ip: 10.26.24.38
+        hostnames:
+        - kafka1
+      - ip: 10.21.51.75
+        hostnames:
+        - sjdcdlake01.np1.ril.com

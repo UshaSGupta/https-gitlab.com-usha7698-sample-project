@@ -1,0 +1,648 @@
+{
+  "swagger": "2.0",
+  "info": {
+    "description": "Api Documentation",
+    "version": "1.0",
+    "title": "Api Documentation",
+    "termsOfService": "urn:tos",
+    "contact": {},
+    "license": {
+      "name": "Apache 2.0",
+      "url": "http://www.apache.org/licenses/LICENSE-2.0"
+    }
+  },
+  "host": "http://saasdev.ril.com/",
+  "basePath": "/rtransport/util",
+  "produces": [
+    "application/json",
+    "application/xml"
+  ],
+  "schemes": [
+    "http",
+    "https"
+  ],
+  "securityDefinitions": {
+    "JWT": {
+      "type": "apiKey",
+      "in": "header",
+      "name": "Authorization",
+      "description": ""
+    }
+  },
+  "paths": {
+    "/createBundle": {
+      "post": {
+        "parameters": [
+          {
+            "name": "data",
+            "in": "body",
+            "description": "the body",
+            "required": true,
+            "schema": {
+              "$ref": "#/definitions/Data"
+            }
+          }
+        ],
+        "description": "",
+        "tags": [
+          "default"
+        ],
+        "responses": {
+          "200": {
+            "description": ""
+          },
+          "default": {
+            "description": "Unexpected error"
+          }
+        }
+      }
+    },
+    "/getAvailableBundle": {
+      "post": {
+        "parameters": [
+          {
+            "name": "data",
+            "in": "body",
+            "description": "the body",
+            "required": true,
+            "schema": {
+              "$ref": "#/definitions/Data"
+            }
+          }
+        ],
+        "description": "",
+        "tags": [
+          "default"
+        ],
+        "responses": {
+          "200": {
+            "description": ""
+          },
+          "default": {
+            "description": "Unexpected error"
+          }
+        }
+      }
+    },
+    "/getAllBundles": {
+      "post": {
+        "parameters": [
+          {
+            "name": "data",
+            "in": "body",
+            "description": "the body",
+            "required": true,
+            "schema": {
+              "$ref": "#/definitions/Data"
+            }
+          }
+        ],
+        "description": "",
+        "tags": [
+          "default"
+        ],
+        "responses": {
+          "200": {
+            "description": ""
+          },
+          "default": {
+            "description": "Unexpected error"
+          }
+        }
+      }
+    },
+    "/getReleaseBundles": {
+      "post": {
+        "parameters": [
+          {
+            "name": "data",
+            "in": "body",
+            "description": "the body",
+            "required": true,
+            "schema": {
+              "$ref": "#/definitions/Databundles"
+            }
+          }
+        ],
+        "description": "",
+        "tags": [
+          "default"
+        ],
+        "responses": {
+          "200": {
+            "description": ""
+          },
+          "default": {
+            "description": "Unexpected error"
+          }
+        }
+      }
+    },
+    "/getAllTablesFromBundle": {
+      "post": {
+        "parameters": [
+          {
+            "name": "data",
+            "in": "body",
+            "description": "the body",
+            "required": true,
+            "schema": {
+              "$ref": "#/definitions/Datatablefrombundle"
+            }
+          }
+        ],
+        "description": "",
+        "tags": [
+          "default"
+        ],
+        "responses": {
+          "200": {
+            "description": ""
+          },
+          "default": {
+            "description": "Unexpected error"
+          }
+        }
+      }
+    },
+    "/downloadBundle": {
+      "post": {
+        "parameters": [
+          {
+            "name": "data",
+            "in": "body",
+            "description": "the body",
+            "required": true,
+            "schema": {
+              "$ref": "#/definitions/Databundlename"
+            }
+          }
+        ],
+        "description": "",
+        "tags": [
+          "default"
+        ],
+        "responses": {
+          "200": {
+            "description": ""
+          },
+          "default": {
+            "description": "Unexpected error"
+          }
+        }
+      }
+    },
+    "/getTableDataFromBundle": {
+      "post": {
+        "parameters": [
+          {
+            "name": "data",
+            "in": "body",
+            "description": "the body",
+            "required": true,
+            "schema": {
+              "$ref": "#/definitions/Datagettablebundle"
+            }
+          }
+        ],
+        "description": "",
+        "tags": [
+          "default"
+        ],
+        "responses": {
+          "200": {
+            "description": ""
+          },
+          "default": {
+            "description": "Unexpected error"
+          }
+        }
+      }
+    },
+    "/insertTobundle": {
+      "post": {
+        "parameters": [
+          {
+            "name": "data",
+            "in": "body",
+            "description": "the body",
+            "required": true,
+            "schema": {
+              "$ref": "#/definitions/datainserttobundle"
+            }
+          }
+        ],
+        "description": "",
+        "tags": [
+          "default"
+        ],
+        "responses": {
+          "200": {
+            "description": ""
+          },
+          "default": {
+            "description": "Unexpected error"
+          }
+        }
+      }
+    },
+    "/getDataVersion": {
+      "post": {
+        "parameters": [
+          {
+            "name": "data",
+            "in": "body",
+            "description": "the body",
+            "required": true,
+            "schema": {
+              "$ref": "#/definitions/dataversion"
+            }
+          }
+        ],
+        "description": "",
+        "tags": [
+          "default"
+        ],
+        "responses": {
+          "200": {
+            "description": ""
+          },
+          "default": {
+            "description": "Unexpected error"
+          }
+        }
+      }
+    },
+    "/filterBundles": {
+      "post": {
+        "parameters": [
+          {
+            "name": "data",
+            "in": "body",
+            "description": "the body",
+            "required": true,
+            "schema": {
+              "$ref": "#/definitions/Datafilterbundle"
+            }
+          }
+        ],
+        "description": "",
+        "tags": [
+          "default"
+        ],
+        "responses": {
+          "200": {
+            "description": ""
+          },
+          "default": {
+            "description": "Unexpected error"
+          }
+        }
+      }
+    }
+  },
+  "definitions": {
+    "Data": {
+      "required": [
+        "domainID"
+      ],
+      "properties": {
+        "domainID": {
+          "type": "string",
+          "description": ""
+        }
+      }
+    },
+    "Error": {
+      "required": [
+        "message"
+      ],
+      "properties": {
+        "message": {
+          "type": "string",
+          "description": ""
+        }
+      }
+    },
+    "Databundles": {
+      "required": [
+        "domainID",
+        "bundleName",
+        "bStatus"
+      ],
+      "properties": {
+        "domainID": {
+          "type": "string",
+          "description": ""
+        },
+        "bundleName": {
+          "type": "string",
+          "description": ""
+        },
+        "bStatus": {
+          "type": "string",
+          "description": ""
+        }
+      }
+    },
+    "Datatablefrombundle": {
+      "required": [
+        "bundleName",
+        "db",
+        "tableName"
+      ],
+      "properties": {
+        "bundleName": {
+          "type": "string",
+          "description": ""
+        },
+        "db": {
+          "type": "string",
+          "description": ""
+        },
+        "tableName": {
+          "type": "string",
+          "description": ""
+        }
+      }
+    },
+    "Databundlename": {
+      "required": [
+        "bundleName"
+      ],
+      "properties": {
+        "bundleName": {
+          "type": "string",
+          "description": ""
+        }
+      }
+    },
+    "Datagettablebundle": {
+      "required": [
+        "bundleName",
+        "db",
+        "tableName"
+      ],
+      "properties": {
+        "bundleName": {
+          "type": "string",
+          "description": ""
+        },
+        "db": {
+          "type": "string",
+          "description": ""
+        },
+        "tableName": {
+          "type": "string",
+          "description": ""
+        }
+      }
+    },
+    "Insertdata": {
+      "required": [
+        "id",
+        "EPNo",
+        "name",
+        "company",
+        "track",
+        "date",
+        "inTime",
+        "outTime",
+        "totalHours",
+        "days"
+      ],
+      "properties": {
+        "id": {
+          "type": "string",
+          "description": ""
+        },
+        "EPNo": {
+          "type": "string",
+          "description": ""
+        },
+        "name": {
+          "type": "string",
+          "description": ""
+        },
+        "company": {
+          "type": "string",
+          "description": ""
+        },
+        "track": {
+          "type": "string",
+          "description": ""
+        },
+        "date": {
+          "type": "string",
+          "description": ""
+        },
+        "inTime": {
+          "type": "string",
+          "description": ""
+        },
+        "outTime": {
+          "type": "string",
+          "description": ""
+        },
+        "totalHours": {
+          "type": "string",
+          "description": ""
+        },
+        "days": {
+          "type": "string",
+          "description": ""
+        }
+      }
+    },
+    "header": {
+      "required": [
+        "domainID",
+        "bundle",
+        "db",
+        "table"
+      ],
+      "properties": {
+        "domainID": {
+          "type": "string",
+          "description": ""
+        },
+        "bundle": {
+          "type": "string",
+          "description": ""
+        },
+        "db": {
+          "type": "string",
+          "description": ""
+        },
+        "table": {
+          "type": "string",
+          "description": ""
+        }
+      }
+    },
+    "datainserttobundle": {
+      "required": [
+        "header",
+        "dataBody"
+      ],
+      "properties": {
+        "header": {
+          "$ref": "#/definitions/header"
+        },
+        "dataBody": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/Insertdata"
+          }
+        }
+      }
+    },
+    "Insertdata1": {
+      "required": [
+        "id",
+        "EPNo",
+        "name",
+        "company",
+        "track",
+        "date",
+        "inTime",
+        "outTime",
+        "totalHours",
+        "days"
+      ],
+      "properties": {
+        "id": {
+          "type": "string",
+          "description": ""
+        },
+        "EPNo": {
+          "type": "string",
+          "description": ""
+        },
+        "name": {
+          "type": "string",
+          "description": ""
+        },
+        "company": {
+          "type": "string",
+          "description": ""
+        },
+        "track": {
+          "type": "string",
+          "description": ""
+        },
+        "date": {
+          "type": "string",
+          "description": ""
+        },
+        "inTime": {
+          "type": "string",
+          "description": ""
+        },
+        "outTime": {
+          "type": "string",
+          "description": ""
+        },
+        "totalHours": {
+          "type": "string",
+          "description": ""
+        },
+        "days": {
+          "type": "string",
+          "description": ""
+        }
+      }
+    },
+    "header1": {
+      "required": [
+        "domainID",
+        "db",
+        "table"
+      ],
+      "properties": {
+        "domainID": {
+          "type": "string",
+          "description": ""
+        },
+        "db": {
+          "type": "string",
+          "description": ""
+        },
+        "table": {
+          "type": "string",
+          "description": ""
+        }
+      }
+    },
+    "dataversion": {
+      "required": [
+        "header",
+        "dataBody"
+      ],
+      "properties": {
+        "header": {
+          "$ref": "#/definitions/header1"
+        },
+        "dataBody": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/Insertdata1"
+          }
+        }
+      }
+    },
+    "Datafilterbundle": {
+      "required": [
+        "domainID",
+        "status",
+        "viewDomainID",
+        "from",
+        "to"
+      ],
+      "properties": {
+        "domainID": {
+          "type": "string",
+          "description": ""
+        },
+        "status": {
+          "type": "string",
+          "description": ""
+        },
+        "viewDomainID": {
+          "type": "string",
+          "description": ""
+        },
+        "from": {
+          "type": "string",
+          "description": ""
+        },
+        "to": {
+          "type": "string",
+          "description": ""
+        }
+      }
+    }
+  },
+  "responses": {},
+  "parameters": {},
+  "tags": [
+    {
+      "name": "default",
+      "description": ""
+    }
+  ],
+  "extraInfo": {
+    "bizOwner": "Hardik Dave",
+    "bizOwnerMail": "Hardik.Dave@ril.com",
+    "endpointSecurityScheme": "nonsecured",
+    "endpointSecurityAuthType": "",
+    "endpointSecurityUsername": "",
+    "endpointSecurityPassword": "",
+    "tags": "RTransport",
+    "techOwner": "Harshad Makwana",
+    "techOwnerMail": "Harshad.Makwana@ril.com",
+    "tiersCollection": "Unlimited",
+    "visibility": "public",
+    "CORSAllowOrigins": "http://saasdev.ril.com"
+  }
+}
