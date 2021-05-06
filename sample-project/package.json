@@ -21,7 +21,7 @@
     "pug": "^2.0.3",
     "q": "^1.5.1",
     "request": "^2.88.0",
-    "underscore": "^1.9.1"
+    "underscore": "^1.12.1"
   },
   "standard": {
     "global": [
